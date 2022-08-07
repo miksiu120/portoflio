@@ -1,0 +1,486 @@
+@import './_colors';
+@import './_animations';
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: $background-color;
+	font-family: 'Inter', sans-serif;
+	color: #fff;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+section {
+	padding-bottom: 5em;
+}
+
+.title {
+	padding: 3em 0.5em 1em 2em;
+	margin-bottom: 2em;
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+	&__square {
+		position: relative;
+		width: 26px;
+		height: 26px;
+		transform: rotate(45deg);
+		background: rgb(255, 0, 63);
+		background: radial-gradient(circle, rgba(255, 0, 63, 1) 70%, rgba(250, 5, 54, 1) 54%, rgba(247, 42, 47, 1) 68%);
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 36px;
+			height: 36px;
+			border: 1px solid $main-red-color;
+		}
+	}
+	&__text {
+		margin-left: 1em;
+		font-weight: 400;
+		letter-spacing: 3px;
+	}
+}
+
+.nav {
+	background-color: $container-color;
+	text-transform: capitalize;
+	padding: 1em 2em;
+	width: 100%;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		font-size: 2.5rem;
+		font-weight: 500;
+		letter-spacing: 2px;
+		padding: 0.5em 0.25em;
+		cursor: pointer;
+		span {
+			color: $main-red-color;
+		}
+	}
+	&__burger {
+		font-size: 2.5rem;
+		padding: 0.5em;
+	}
+	&__menu {
+		display: none;
+		&__element {
+			font-weight: 300;
+			font-size: 1.5rem;
+			padding: 0.6em 0.6em;
+			margin: 0em 0.6em;
+			transition: 0.3s color;
+			text-decoration: none;
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				color: $main-red-color;
+			}
+		}
+	}
+}
+
+.header {
+	overflow-x: hidden;
+	position: relative;
+	min-height: 93vh;
+	background-color: #1a1a2c;
+	padding: 5em 0;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	overflow: hidden;
+	* {
+		z-index: 3;
+	}
+	&__title {
+		font-size: 5rem;
+		margin-left: 1rem;
+	}
+	&__describe {
+		font-size: 2.4rem;
+		margin-left: 1rem;
+		font-weight: 300;
+		color: $main-red-color;
+	}
+	&__button {
+		position: relative;
+		background-color: $main-red-color;
+		border: none;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-weight: 600;
+		font-size: 2rem;
+		padding: 0.5em 1em;
+		align-self: center;
+		margin: 17% 0;
+		cursor: pointer;
+		// margin-top: 1.5em;
+		// margin-right: 3em;
+		text-decoration: none;
+		background: linear-gradient(180deg, #bc1840 0%, #e01d4a 6.25%, #ff0021 70.31%, #ff0021 81.77%);
+		z-index: 100;
+		&:hover {
+			animation: hoverButton 0.4s forwards;
+		}
+		&::before {
+			position: absolute;
+			width: 99%;
+			height: 98%;
+			background-color: none;
+			border-top: 1px solid $main-red-color;
+			border-left: 1px solid $main-red-color;
+			left: -12%;
+			top: -24%;
+			content: '';
+			transform: rotate(-3deg);
+			transition: 0.35s;
+		}
+		&::after {
+			position: absolute;
+			width: 99%;
+			height: 98%;
+			background-color: none;
+			border-bottom: 1px solid $main-red-color;
+			border-right: 1px solid $main-red-color;
+			right: -12%;
+			bottom: -24%;
+			content: '';
+			transform: rotate(3deg);
+			transition: 0.4s;
+		}
+		&:hover::after {
+			animation: hoverButtonAfter 0.5s forwards;
+		}
+		&:hover::before {
+			animation: hoverButtonBefore 0.5s forwards;
+		}
+		&:hover {
+			animation: hoverButton 0.5s forwards;
+		}
+	}
+
+	&__photo {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		filter: grayscale(70%);
+		bottom: 0px;
+		background-image: url('../bgImg/me.png');
+		background-repeat: no-repeat;
+		background-position: 50% 20%;
+		background-size: cover;
+		overflow: hidden;
+		width: 100%;
+		height: 50vh;
+		z-index: 2;
+		opacity: 0;
+		animation: showMe 0.4s forwards cubic-bezier(0.075, 0.82, 0.165, 1);
+		animation-delay: 0.6s;
+		overflow: hidden;
+	}
+	&__bgDots {
+		position: absolute;
+		width: 300px;
+		right: -30%;
+		top: 15%;
+		opacity: 0.25;
+		z-index: 1;
+		overflow: hidden;
+	}
+	&__bgDots2 {
+		position: absolute;
+		width: 300px;
+		left: -30%;
+		top: 40%;
+		opacity: 0.25;
+		z-index: 1;
+		overflow: hidden;
+	}
+}
+
+.quote {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+	background-color: #242230;
+	padding: 0 2em;
+	border-bottom: 1px solid $shadow-red-color;
+
+	h3 {
+		margin-top: 3em;
+		font-size: 2.3rem;
+		font-weight: 300;
+		font-style: italic;
+		letter-spacing: 1px;
+	}
+	p {
+		font-size: 2.5rem;
+		font-weight: 600;
+		letter-spacing: 2px;
+		margin-left: 40%;
+		padding-top: 0.5em;
+		margin-bottom: 3em;
+	}
+	&__quoteIcon {
+		top: 20%;
+		position: absolute;
+		width: 70px;
+		opacity: 0.1;
+	}
+	&__quoteIconLeft {
+		left: 5%;
+	}
+	&__quoteIconRight {
+		right: 5%;
+	}
+}
+
+.abilities {
+	background-image: url('../bgImg/architect.svg');
+
+	border-bottom: 1px solid $shadow-red-color;
+	&__box {
+		display: grid;
+
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(1fr, 6) 1fr;
+		gap: 3rem 1rem;
+		padding: 0 2rem;
+		align-items: center;
+		justify-content: center;
+
+		&__card {
+			align-self: center;
+			justify-self: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			justify-content: space-evenly;
+			width: 140px;
+			height: 170px;
+			padding: 1em 0.5em;
+			background-color: $container-color;
+			transition: 0.3s;
+			border: 2px solid transparent;
+			border-bottom: 2px solid $shadow-red-color;
+			border-right: 2px solid $shadow-red-color;
+
+			&:hover {
+				background-color: $background-color;
+				border: 3px solid $shadow-red-color;
+				perspective: 600px;
+			}
+			img {
+				height: 55%;
+			}
+			h3 {
+				font-size: 1.8rem;
+				font-weight: 400;
+			}
+			&__git {
+				grid-column: 1/3;
+			}
+		}
+	}
+}
+
+.projects {
+	&__projectCard {
+		display: flex;
+		flex-direction: column;
+		background-color: $container-color;
+		padding: 2em;
+		margin: 3em 1.5em;
+		&__title {
+			font-size: 2.7rem;
+			margin-bottom: 1em;
+			font-weight: 400;
+			letter-spacing: 1px;
+		}
+		&__text {
+			font-size: 1.8rem;
+			margin-bottom: 2em;
+		}
+		&__image {
+			width: 100%;
+			align-self: center;
+			max-width: 600px;
+		}
+		&__button {
+			position: relative;
+			align-self: center;
+			font-size: 2rem;
+			margin: 1.5em 0;
+			padding: 0.5em 1.5em;
+			font-family: 'Inter', sans-serif;
+			font-weight: 600;
+			letter-spacing: 1px;
+			background: rgb(255, 0, 63);
+			background: linear-gradient(180deg, #bc1840 0%, #e01d4a 6.25%, #ff0021 70.31%, #ff0021 81.77%);
+			background-size: 100% 200%;
+			border: none;
+			color: white;
+			cursor: pointer;
+			transition: 0.5s;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: -0.3em;
+				left: -0.4em;
+				border-top: 1px solid #ff0021;
+				border-left: 1px solid #ff0021;
+				background-color: fff;
+				transition: 0.3s;
+			}
+			&:hover {
+				background-position: 0 100%;
+			}
+			&:hover::after {
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	&__decor {
+		display: none;
+		position: absolute;
+		top: 20%;
+		left: 60%;
+	}
+}
+
+.contact {
+	position: relative;
+
+	&__elements {
+		display: flex;
+		position: relative;
+		flex-direction: column;
+	}
+	.title {
+		align-self: flex-start;
+	}
+
+	&__secondColor {
+		background-color: $toned-red-color;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 25%;
+		z-index: -1;
+	}
+	min-height: 70vh;
+	&__data {
+		margin-bottom: 4em;
+		padding: 1em 2em;
+		&__title {
+			font-size: 2.4rem;
+			margin-bottom: 0.5em;
+			font-weight: 600;
+		}
+		&__description {
+			font-size: 2rem;
+			font-weight: 300;
+		}
+		&__list {
+			display: flex;
+			flex-direction: column;
+			padding: 0.5em 0;
+			font-size: 2rem;
+			&__element {
+				text-decoration: underline;
+				margin: 0.25em 0;
+				cursor: pointer;
+				i {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	&__box {
+		align-self: center;
+		background-color: $container-color;
+		margin: 0em 1.5em;
+		padding: 3em 1em;
+		box-shadow: 2px 2px 4px #3339;
+		width: 80%;
+		max-width: 450px;
+		&__title {
+			font-size: 2.4rem;
+			text-align: center;
+			font-weight: 600;
+			margin-bottom: 0.5em;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			padding: 0 2em;
+			* {
+				margin: 1em 0;
+				font-size: 1.7rem;
+				font-family: 'Inter', sans-serif;
+			}
+			input {
+				padding: 0.2em 0.4em;
+			}
+			textarea {
+				padding: 0.2em 0.4em;
+				resize: vertical;
+			}
+			button {
+				padding: 0.2em;
+				color: #fff;
+				background-color: $main-red-color;
+				border: none;
+				font-size: 2rem;
+				cursor: pointer;
+			}
+			&__input {
+				font-size: 2em;
+				margin: 2em 1em;
+				background-color: #fff;
+				color: #fff;
+			}
+		}
+	}
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	background-color: $toned-red-color;
+	&__text {
+		font-size: 1.5rem;
+		padding: 0.4em 0;
+	}
+}
+
+@import './_small';
+@import './_medium';
+@import './_large';
+@import './_xlarge';
