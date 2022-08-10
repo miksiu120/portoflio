@@ -1,4 +1,45 @@
 @media (min-width: 992px) {
+	.sideNav {
+		display: block;
+		position: fixed;
+		top: 50%;
+		right: 0px;
+		transform: translate(calc(100% - 34px), -50%);
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		font-size: 1.8rem;
+		padding: 0 0.5em 0 0.25em;
+		letter-spacing: 1px;
+		z-index: 10000;
+		transition: 0.35s transform;
+
+		&__element {
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+			margin-bottom: 1.2em;
+			.squareBorder {
+				content: '';
+				display: inline-block;
+				top: 50%;
+				left: -50%;
+				transform: rotate(45deg) translateY(25%);
+				width: 18px;
+				height: 18px;
+				margin-right: 7px;
+				border: 1px solid $main-red-color;
+				transition: 0.3s;
+			}
+			&:hover > .squareBorder {
+				background-color: $main-red-color;
+			}
+		}
+		&:hover {
+			transform: translate(0%, -50%);
+		}
+	}
+
 	.title {
 		font-size: 2.8rem;
 		&__square {
@@ -59,6 +100,7 @@
 
 	.projects {
 		position: relative;
+		margin-top: 1em;
 		&__projectCard {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -143,6 +185,9 @@
 	.contact {
 		&__secondColor {
 			height: 20%;
+		}
+		.container {
+			padding: 0 1em;
 		}
 		&__elements {
 			flex-direction: row;

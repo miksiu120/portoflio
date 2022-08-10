@@ -11,11 +11,13 @@ function ProjectCard({ title, text, image }: Prop) {
 		<div className='projects__projectCard'>
 			<h3 className='projects__projectCard__title'>{title}</h3>
 			<p className='projects__projectCard__text'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consectetur inventore voluptatum recusandae, Lorem, ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, sed! 
-				
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, consectetur inventore voluptatum recusandae,
+				Lorem, ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, sed!
 			</p>
-			<img src={`./img/${image}`} className='projects__projectCard__image'></img>
-			<button type='button' className='projects__projectCard__button'>Try now</button>
+			<img src={image} className='projects__projectCard__image' alt='wtf'></img>
+			<button type='button' className='projects__projectCard__button'>
+				Try now
+			</button>
 		</div>
 	)
 }

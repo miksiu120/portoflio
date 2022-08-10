@@ -1,16 +1,16 @@
 import React from 'react'
 
 interface Prop {
-	srcImage: string
+	image: string
 	text: string
 	name: string
 }
 
-function Card({ name, srcImage, text }: Prop) {
+function Card({ name, image, text }: Prop) {
 	function showHeight() {
 		console.log(window.scrollY)
 	}
-
+	console.log(typeof image)
 	return (
 		<div
 			data-aos='flip-up'
@@ -18,7 +18,7 @@ function Card({ name, srcImage, text }: Prop) {
 			data-aos-once='true'
 			onClick={showHeight}
 			className={`abilities__box__card abilities__box__card__${name}`}>
-			<img src={`./icons/${srcImage}`} />
+			<img src={image} />
 			<h3>{text}</h3>
 		</div>
 	)

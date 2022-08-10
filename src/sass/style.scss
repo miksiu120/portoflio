@@ -21,8 +21,17 @@ body {
 	margin: 0 auto;
 }
 
+.sideNav {
+	display: none;
+}
+
 section {
 	padding-bottom: 5em;
+}
+.is-current {
+	.squareBorder {
+		background-color: $main-red-color;
+	}
 }
 
 .title {
@@ -61,6 +70,7 @@ section {
 	text-transform: capitalize;
 	padding: 1em 2em;
 	width: 100%;
+	position: relative;
 	.container {
 		display: flex;
 		align-items: center;
@@ -77,8 +87,29 @@ section {
 		}
 	}
 	&__burger {
-		font-size: 2.5rem;
-		padding: 0.5em;
+		position: relative;
+		&__mainSlab,
+		&__topSlab,
+		&__bottomSlab {
+			position: absolute;
+			height: 3px;
+			width: 30px;
+			background-color: #fff;
+			border-radius: 3px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&__mainSlab {
+			top: 50%;
+		}
+		&__topSlab {
+			top: 30%;
+		}
+		&__bottomSlab {
+			top: 70%;
+		}
+
+		padding: 2.5rem 2.5rem;
 	}
 	&__menu {
 		display: none;
@@ -185,7 +216,7 @@ section {
 		transform: translateX(-50%);
 		filter: grayscale(70%);
 		bottom: 0px;
-		background-image: url('../bgImg/me.png');
+		background-image: url('../img/bgImg/me.png');
 		background-repeat: no-repeat;
 		background-position: 50% 20%;
 		background-size: cover;
@@ -258,7 +289,7 @@ section {
 }
 
 .abilities {
-	background-image: url('../bgImg/architect.svg');
+	background-image: url('../img/bgImg/architect.svg');
 
 	border-bottom: 1px solid $shadow-red-color;
 	&__box {

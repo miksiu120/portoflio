@@ -1,4 +1,21 @@
 @media (min-width: 1200px) {
+
+
+
+	.sideNav{
+		transform: translate(calc(100% - 45px), -50%);
+		font-size: 2.4rem;
+		&__element{
+
+
+			.squareBorder{
+				width: 24px;
+				height: 24px;
+				margin-right: 10px;
+			}
+		}
+	}
+
 	.title {
 		font-size: 2.8rem;
 		&__square {

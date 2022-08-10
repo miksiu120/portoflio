@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import SideNav from './components/SideNav'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Quote from './components/Quote'
@@ -13,8 +14,9 @@ function App() {
 	}, [window.screenY])
 
 	return (
-		<div className='App'>
+		<div className='App' data-bs-spy='scroll' data-bs-target='#sideNav'>
 			<Nav />
+			<SideNav />
 			<Header />
 			<main className='main'>
 				<Quote />

@@ -1,6 +1,14 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 function Nav() {
+	let topSlab = <div className='nav__burger__topSlab'></div>
+	let mainSlab = <div className='nav__burger__mainSlab'></div>
+	let bottomSlab = <div className='nav__burger__bottomSlab'></div>
+	
+	function clickBurger() {
+		console.log(topSlab)
+	}
+
 	return (
 		<nav className='nav'>
 			<div className='container'>
@@ -21,7 +29,11 @@ function Nav() {
 						Contact
 					</a>
 				</div>
-				<i className='nav__burger fa-solid fa-bars'></i>
+				<div onClick={clickBurger} className='nav__burger'>
+					{topSlab}
+					{mainSlab}
+					{bottomSlab}
+				</div>
 			</div>
 		</nav>
 	)
