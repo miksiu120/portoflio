@@ -7,16 +7,25 @@ import Abilities from './components/Abilities'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-
+import MobileNav from './components/MobileNav'
+import { transform } from 'typescript'
 function App() {
-	useEffect(() => {
-		console.log(window.screenY)
-	}, [window.screenY])
+	const [doesMobileNavShowed, setDoesMobileNavShowed] = React.useState(true)
+	const [isMenuOpened, setIsMenuOpened] = React.useState<boolean>(false)
+
+	function toggleMobileNav() {
+		setIsMenuOpened(item => !item)
+	}
 
 	return (
-		<div className='App' data-bs-spy='scroll' data-bs-target='#sideNav'>
-			<Nav />
+		<div
+			style={{ overflow: isMenuOpened ? 'hidden' : '' }}
+			className='App'
+			data-bs-spy='scroll'
+			data-bs-target='#sideNav'>
+			<Nav isMenuOpened={isMenuOpened} toggleMobileNav={toggleMobileNav} />
 			<SideNav />
+			<MobileNav isMenuOpened={isMenuOpened} toggleMobileNav={toggleMobileNav} />
 			<Header />
 			<main className='main'>
 				<Quote />

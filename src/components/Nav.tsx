@@ -1,12 +1,27 @@
 import React from 'react'
 import { Link } from 'react-scroll'
-function Nav() {
-	let topSlab = <div className='nav__burger__topSlab'></div>
-	let mainSlab = <div className='nav__burger__mainSlab'></div>
-	let bottomSlab = <div className='nav__burger__bottomSlab'></div>
-	
+
+interface Prop {
+	toggleMobileNav(): void
+	isMenuOpened: boolean
+}
+function Nav({ toggleMobileNav, isMenuOpened }: Prop) {
+	const [topSlab, setTopSlab] = React.useState(<div className='nav__burger__topSlab'></div>)
+	const [mainSlab, setMainSlab] = React.useState(<div className='nav__burger__mainSlab'></div>)
+	const [bottomSlab, setBottomSlab] = React.useState(<div className='nav__burger__bottomSlab'></div>)
+
 	function clickBurger() {
-		console.log(topSlab)
+		if (!isMenuOpened) {
+			setMainSlab(<div className='nav__burger__mainSlab hideMainSlab'></div>)
+			setTopSlab(<div className='nav__burger__topSlab moveUp'></div>)
+			setBottomSlab(<div className='nav__burger__bottomSlab moveDown'></div>)
+			toggleMobileNav()
+		} else {
+			setMainSlab(<div className='nav__burger__mainSlab'></div>)
+			setTopSlab(<div className='nav__burger__topSlab'></div>)
+			setBottomSlab(<div className='nav__burger__bottomSlab'></div>)
+			toggleMobileNav()
+		}
 	}
 
 	return (

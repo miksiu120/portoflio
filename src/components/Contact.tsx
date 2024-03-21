@@ -16,12 +16,16 @@ function Contact() {
 							laboriosam.
 						</p>
 						<div className='contact__data__list'>
-							<a className='contact__data__list__element'>
-								<i className='fa-brands fa-facebook'></i>
-								facebook
+							<a
+								className='contact__data__list__element'
+								href='https://www.linkedin.com/in/micha%C5%82-turski-871639280/'
+								target='blank'>
+								<i className='fa-brands fa-linkedin'></i>
+								linkedin
 							</a>
 
-							<a className='contact__data__list__element'>
+							<a className='contact__data__list__element'
+								href='https://github.com/miksiu120'>
 								<i className='fa-brands fa-github'></i>
 								github
 							</a>

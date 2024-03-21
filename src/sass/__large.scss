@@ -27,7 +27,7 @@
 				transform: rotate(45deg) translateY(25%);
 				width: 18px;
 				height: 18px;
-				margin-right: 7px;
+				margin-right: 10px;
 				border: 1px solid $main-red-color;
 				transition: 0.3s;
 			}
@@ -39,7 +39,22 @@
 			transform: translate(0%, -50%);
 		}
 	}
-
+	.nav {
+		position: relative;
+		padding: 0.4em 2em;
+		&__logo {
+			font-size: 3.2rem;
+		}
+		&__menu {
+			display: block;
+			&__element {
+				font-size: 2.4rem;
+			}
+		}
+		&__burger {
+			display: none;
+		}
+	}
 	.title {
 		font-size: 2.8rem;
 		&__square {
@@ -48,17 +63,6 @@
 			&::after {
 				width: 46px;
 				height: 46px;
-			}
-		}
-		.nav {
-			padding: 0.4em 2em;
-			&__logo {
-				font-size: 3.2rem;
-			}
-			&__menu {
-				&__element {
-					font-size: 2.4rem;
-				}
 			}
 		}
 

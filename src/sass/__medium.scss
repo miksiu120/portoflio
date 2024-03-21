@@ -9,13 +9,11 @@
 			margin-left: 1rem;
 		}
 		&__menu {
-			display: block;
 			&__element {
 				font-size: 2rem;
 			}
 		}
 		&__burger {
-			display: none;
 		}
 	}
 
@@ -37,8 +35,8 @@
 
 		&__photo {
 			transform: translateX(-30%);
-			height: 55vh;
-			width: 80%;
+			height: 80%;
+			width: 60%;
 			background-position: 40% 0%;
 		}
 		&__bgDots {

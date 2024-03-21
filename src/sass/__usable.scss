@@ -1,0 +1,48 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.sideNav {
+	display: none;
+}
+
+section {
+	padding-bottom: 5em;
+}
+.is-current {
+	.squareBorder {
+		background-color: $main-red-color;
+	}
+}
+
+.title {
+	padding: 3em 0.5em 1em 2em;
+	margin-bottom: 2em;
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+	&__square {
+		position: relative;
+		width: 26px;
+		height: 26px;
+		transform: rotate(45deg);
+		background: rgb(255, 0, 63);
+		background: radial-gradient(circle, rgba(255, 0, 63, 1) 70%, rgba(250, 5, 54, 1) 54%, rgba(247, 42, 47, 1) 68%);
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 36px;
+			height: 36px;
+			border: 1px solid $main-red-color;
+		}
+	}
+	&__text {
+		margin-left: 1em;
+		font-weight: 400;
+		letter-spacing: 3px;
+	}
+}

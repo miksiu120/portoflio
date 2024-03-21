@@ -55,6 +55,20 @@
 	100% {
 		opacity: 0.8;
 		transform: translateY(-50%, 0%);
-	
+	}
+}
+
+@keyframes hidingNameSlab {
+	0% {
+		transform: translateX(-50%);
+		opacity: 1;
+		height: 3px;
+	}
+	50% {
+	}
+	100% {
+		transform: translateX(50%);
+		height: 0px;
+		opacity: 0;
 	}
 }
