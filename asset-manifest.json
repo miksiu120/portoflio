@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/miksiu120/portoflio/static/css/main.4398ceba.css",
+    "main.js": "/miksiu120/portoflio/static/js/main.46d7b9b2.js",
+    "static/media/me.png": "/miksiu120/portoflio/static/media/me.3f54e51b3581111f740e.png",
+    "static/media/photoWebsiteImg2.png": "/miksiu120/portoflio/static/media/photoWebsiteImg2.e9b0e148df3960f0ca31.png",
+    "static/media/waiWebsiteImage2.png": "/miksiu120/portoflio/static/media/waiWebsiteImage2.44be2e24f0dbd95f474b.png",
+    "static/media/cryptoWebsiteImg.png": "/miksiu120/portoflio/static/media/cryptoWebsiteImg.1bba4a049efc5c818108.png",
+    "static/media/whitedots.png": "/miksiu120/portoflio/static/media/whitedots.44a64c11a36326376c53.png",
+    "static/media/react.png": "/miksiu120/portoflio/static/media/react.98b1c0c267e50b8f6d64.png",
+    "index.html": "/miksiu120/portoflio/index.html",
+    "static/media/cpu.svg": "/miksiu120/portoflio/static/media/cpu.78555810fa977f03145bdfc032a87240.svg",
+    "static/media/quote-right-solid.svg": "/miksiu120/portoflio/static/media/quote-right-solid.441836011278ace7d20678bb4dd1b42b.svg",
+    "static/media/quote-left-solid.svg": "/miksiu120/portoflio/static/media/quote-left-solid.dbfa398ec97f0cba5ab723cb1ff119dd.svg",
+    "static/media/terminal.svg": "/miksiu120/portoflio/static/media/terminal.d0ff78b81a39922029517d145092dac1.svg",
+    "static/media/code.svg": "/miksiu120/portoflio/static/media/code.02bcf69f1bee06401b9ed8b475441574.svg",
+    "static/media/architect.svg": "/miksiu120/portoflio/static/media/architect.75367e019257c2184475.svg",
+    "main.4398ceba.css.map": "/miksiu120/portoflio/static/css/main.4398ceba.css.map",
+    "main.46d7b9b2.js.map": "/miksiu120/portoflio/static/js/main.46d7b9b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4398ceba.css",
+    "static/js/main.46d7b9b2.js"
+  ]
+}
