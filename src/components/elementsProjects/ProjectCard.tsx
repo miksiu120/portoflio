@@ -14,7 +14,7 @@ function ProjectCard({ title, text, href, image, alt }: Prop) {
 			<h3 className='projects__projectCard__title'>{title}</h3>
 			<p className='projects__projectCard__text'>{text}</p>
 			<img src={image} className='projects__projectCard__image' alt={alt}></img>
-			<a href={href} target='_blank' className='projects__projectCard__button'>
+			<a href={href} target='_blank' className='projects__pro213jectCard__button'>
 				Try now
 			</a>
 		</div>
