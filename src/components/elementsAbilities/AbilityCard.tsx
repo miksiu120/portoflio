@@ -18,7 +18,7 @@ function Card({ name, image, text }: Prop) {
 			data-aos-once='true'
 			onClick={showHeight}
 			className={`abilities__box__card abilities__box__card__${name}`}>
-			<img src={`icon of ${name}`} />
+			<img src={image} alt={`icon of ${name}`} />
 			<h3>{text}</h3>
 		</div>
 	)
