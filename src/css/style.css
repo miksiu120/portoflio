@@ -317,6 +317,8 @@ body {
   letter-spacing: 2px;
   padding: 0.5em 0.25em;
   cursor: pointer;
+  color: #fff;
+  text-decoration: none;
 }
 .nav__logo span {
   color: #ff003f;
