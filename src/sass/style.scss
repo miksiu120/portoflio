@@ -14,7 +14,7 @@ html {
 body {
 	background-color: $background-color;
 	font-family: 'Inter', sans-serif;
-	color: #fff;
+	color: $white-color;
 	overflow-x: hidden;
 }
 
@@ -37,7 +37,7 @@ body {
 	&__element {
 		font-size: 2.4rem;
 		margin-bottom: 1.5em;
-		color: #fff;
+		color: $white-color;
 		text-decoration: none;
 		letter-spacing: 2px;
 		font-weight: 300;
@@ -76,7 +76,7 @@ body {
 			height: 3px;
 			width: 30px;
 			transition: 0.3s transform;
-			background-color: #fff;
+			background-color: $white-color;
 			border-radius: 3px;
 			left: 50%;
 			transform: translateX(-50%);
@@ -120,7 +120,7 @@ body {
 			margin: 0em 0.6em;
 			transition: 0.3s color;
 			text-decoration: none;
-			color: #fff;
+			color: $white-color;
 			cursor: pointer;
 			&:hover {
 				color: $main-red-color;
@@ -157,7 +157,7 @@ body {
 		position: relative;
 		background-color: $main-red-color;
 		border: none;
-		color: #fff;
+		color: $white-color;
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		font-weight: 600;
@@ -217,7 +217,7 @@ body {
 		transform: translateX(-50%);
 		filter: grayscale(65%);
 		bottom: 0px;
-		background-image: url('../img/bgImg/me.png');
+		background-image: url('../img/bgImg/me-min\.webp');
 		background-repeat: no-repeat;
 		background-position: 50% 20%;
 		background-size: cover;
@@ -444,17 +444,17 @@ body {
 			flex-direction: column;
 			padding: 0.5em 0;
 			font-size: 2rem;
+			transform: color 0.3s ease-in-out;
 			&__element {
 				text-decoration: underline;
 				margin: 0.25em 0;
 				cursor: pointer;
-
+				color: $white-color;
+				&:hover {
+					animation: whiteToRedColor 0.5s forwards;
+				}
 				i {
 					margin-right: 5px;
-				}
-				&:visited {
-					// color for visited links
-					color: rgb(222, 129, 129);
 				}
 			}
 		}
@@ -492,7 +492,7 @@ body {
 			}
 			button {
 				padding: 0.2em;
-				color: #fff;
+				color: $white-color;
 				background-color: $main-red-color;
 				border: none;
 				font-size: 2rem;
@@ -501,8 +501,8 @@ body {
 			&__input {
 				font-size: 2em;
 				margin: 2em 1em;
-				background-color: #fff;
-				color: #fff;
+				background-color: $white-color;
+				color: $white-color;
 			}
 		}
 	}

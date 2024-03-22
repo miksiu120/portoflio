@@ -9,8 +9,10 @@ function Header() {
 			<a href='#abilities' className='header__button'>
 				Check
 			</a>
-			<img src={dots} className='header__bgDots'></img>
-			<img src={dots} className='header__bgDots2'></img>
+			<img src={dots} className='header__bgDots'
+			alt = 'background decorative dots'></img>
+			<img src={dots} className='header__bgDots2'
+			alt = 'background decorative dots'></img>
 			<div className='header__bgPhoto'>
 				<div className='header__photo'></div>
 			</div>

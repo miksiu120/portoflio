@@ -16,6 +16,9 @@ function App() {
 	function toggleMobileNav() {
 		setIsMenuOpened(item => !item)
 	}
+	useEffect(() => {
+		document.title = 'My website';
+	  }, []);
 
 	return (
 		<div

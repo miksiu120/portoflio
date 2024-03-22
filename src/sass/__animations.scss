@@ -72,3 +72,13 @@
 		opacity: 0;
 	}
 }
+
+@keyframes whiteToRedColor {
+	0% {
+		color:$white-color;
+	}
+	100% {
+		color: $main-red-color;
+	}
+	
+}

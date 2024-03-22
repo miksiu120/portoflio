@@ -12,8 +12,7 @@ function Contact() {
 						<h3 className='contact__data__title'> Get in touch </h3>
 						<p className='contact__data__description'>
 							{' '}
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae libero ea, nulla debitis laborum
-							laboriosam.
+							Please feel free to get in touch if you're interested in collaborating with me. You can reach me via:
 						</p>
 						<div className='contact__data__list'>
 							<a

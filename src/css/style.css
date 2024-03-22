@@ -164,6 +164,22 @@
     opacity: 0;
   }
 }
+@-webkit-keyframes whiteToRedColor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #ff003f;
+  }
+}
+@keyframes whiteToRedColor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #ff003f;
+  }
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -480,7 +496,7 @@ body {
   -webkit-filter: grayscale(65%);
           filter: grayscale(65%);
   bottom: 0px;
-  background-image: url("../img/bgImg/me.png");
+  background-image: url("../img/bgImg/me-min.webp");
   background-repeat: no-repeat;
   background-position: 50% 20%;
   background-size: cover;
@@ -748,17 +764,21 @@ body {
           flex-direction: column;
   padding: 0.5em 0;
   font-size: 2rem;
+  -webkit-transform: color 0.3s ease-in-out;
+          transform: color 0.3s ease-in-out;
 }
 .contact__data__list__element {
   text-decoration: underline;
   margin: 0.25em 0;
   cursor: pointer;
+  color: #fff;
+}
+.contact__data__list__element:hover {
+  -webkit-animation: whiteToRedColor 0.5s forwards;
+          animation: whiteToRedColor 0.5s forwards;
 }
 .contact__data__list__element i {
   margin-right: 5px;
-}
-.contact__data__list__element:visited {
-  color: rgb(222, 129, 129);
 }
 .contact__box {
   -ms-flex-item-align: center;
@@ -1071,6 +1091,7 @@ body {
     position: absolute;
   }
   .title .header__photo {
+    background-image: url("../img/bgImg/me-min.webp");
     position: absolute;
     width: 50%;
     left: 65%;
