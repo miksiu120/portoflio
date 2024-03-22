@@ -10,9 +10,12 @@ import bgIconTerminal from '../img/icons/terminal.svg'
 function Projects() {
 	return (
 		<section className='projects container' id='projects'>
-			<img data-aos='fade-right' src={bgIconCode} className='projects__decor' />
-			<img data-aos='fade-left' src={bgIconCpu} className='projects__decor' />
-			<img data-aos='fade-right' src={bgIconTerminal} className='projects__decor' />
+			<img data-aos='fade-right' src={bgIconCode} className='projects__decor'
+			alt = "bgIconCode" />
+			<img data-aos='fade-left' src={bgIconCpu} className='projects__decor'
+			alt = "bgIconCpu" />
+			<img data-aos='fade-right' src={bgIconTerminal} className='projects__decor'
+			alt = "bgIconTerminal" />
 			<SectionTitle sectionName='Projects' />
 			<div className='projects__box'>
 				<ProjectCard

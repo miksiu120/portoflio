@@ -23,18 +23,17 @@ function Contact() {
 								linkedin
 							</a>
 
-							<a className='contact__data__list__element'
-								href='https://github.com/miksiu120'>
+							<a className='contact__data__list__element' href='https://github.com/miksiu120'>
 								<i className='fa-brands fa-github'></i>
 								github
 							</a>
 
-							<a className='contact__data__list__element'>
+							<a className='contact__data__list__element' href='#'>
 								<i className='fa-solid fa-envelope'></i>
 								miksiu120@gmail.com
 							</a>
 
-							<a className='contact__data__list__element'>
+							<a className='contact__data__list__element' href='#'>
 								<i className='fa-solid fa-phone'></i>
 								725 102 741
 							</a>

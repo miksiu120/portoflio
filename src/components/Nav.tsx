@@ -27,7 +27,8 @@ function Nav({ toggleMobileNav, isMenuOpened }: Prop) {
 	return (
 		<nav className='nav'>
 			<div className='container'>
-				<a className='nav__logo'>
+				<a className='nav__logo'
+				href='#'>
 					miksiu <span> dev </span>
 				</a>
 				<div className='nav__menu'>
