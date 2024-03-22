@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portoflio/static/css/main.457f407e.css",
+    "main.css": "/portoflio/static/css/main.838353a4.css",
     "main.js": "/portoflio/static/js/main.79c565b9.js",
     "static/media/photoWebsiteImg2.png": "/portoflio/static/media/photoWebsiteImg2.e9b0e148df3960f0ca31.png",
     "static/media/me-min.webp": "/portoflio/static/media/me-min.50f8564f10d8182d7c48.webp",
@@ -15,11 +15,11 @@
     "static/media/terminal.svg": "/portoflio/static/media/terminal.d0ff78b81a39922029517d145092dac1.svg",
     "static/media/code.svg": "/portoflio/static/media/code.02bcf69f1bee06401b9ed8b475441574.svg",
     "static/media/architect.svg": "/portoflio/static/media/architect.75367e019257c2184475.svg",
-    "main.457f407e.css.map": "/portoflio/static/css/main.457f407e.css.map",
+    "main.838353a4.css.map": "/portoflio/static/css/main.838353a4.css.map",
     "main.79c565b9.js.map": "/portoflio/static/js/main.79c565b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.457f407e.css",
+    "static/css/main.838353a4.css",
     "static/js/main.79c565b9.js"
   ]
 }
